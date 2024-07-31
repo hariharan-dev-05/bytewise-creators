@@ -1,0 +1,528 @@
+<!-- Including header.ejs -->
+<%- include('partials/header') %>
+
+  <div class="h-screen w-screen bg-[var(--secondary)] web">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="flex justify-between">
+          <div class="flex space-x-7">
+            <!-- Logo -->
+            <div>
+              <a href="/" class="flex items-center py-4 px-2">
+                <img src="assets/logo/icon.svg" alt="Logo" class="h-8 mr-2" />
+              </a>
+            </div>
+          </div>
+          <!-- Primary Navbar items -->
+          <div class="hidden md:flex items-center space-x-1">
+            <a href="/"
+              class="py-4 px-2 text-[var(--primary)] font-semibold hover:text-[var(--accent)] transition duration-500">Home</a>
+            <a href="#aboutus"
+              class="py-4 px-2 text-[var(--primary)] font-semibold hover:text-[var(--accent)] transition duration-500">About</a>
+            <a href="#services"
+              class="py-4 px-2 text-[var(--primary)] font-semibold hover:text-[var(--accent)] transition duration-500">Services</a>
+            <a href="#contact"
+              class="py-4 px-2 text-[var(--primary)] font-semibold hover:text-[var(--accent)] transition duration-500">Contact</a>
+          </div>
+          <!-- Mobile menu button -->
+          <div class="md:hidden flex items-center">
+            <button class="outline-none mobile-menu-button">
+              <svg class="w-6 h-6 text-[var(--primary)] hover:text-[var(--accent)]" x-show="!showMenu" fill="none"
+                stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- mobile menu -->
+      <div class="hidden mobile-menu">
+        <ul class="">
+          <li>
+            <a href="/" class="block text-sm px-2 py-4 text-white bg-[var(--accent)] font-semibold">Home</a>
+          </li>
+          <li>
+            <a href="#services"
+              class="block text-sm px-2 py-4 text-[var(--primary)] hover:bg-[var(--accent)] hover:text-white transition duration-500">About</a>
+          </li>
+          <li>
+            <a href="#aboutus"
+              class="block text-sm px-2 py-4 text-[var(--primary)] hover:bg-[var(--accent)] hover:text-white transition duration-500">Services</a>
+          </li>
+          <li>
+            <a href="#contact"
+              class="block text-sm px-2 py-4 text-[var(--primary)] hover:bg-[var(--accent)] hover:text-white transition duration-500">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-[var(--secondary)] pt-5">
+      <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center">
+        <!-- Illustration -->
+        <div class="w-full md:w-1/2 mt-10 md:mt-0 flex justify-end">
+          <img src="assets/svgs/hero-svg.svg" alt="Digital Transformation Illustration" class="w-3/4 h-auto" />
+        </div>
+        <!-- Text content -->
+        <div class="w-full md:w-1/2 text-center md:text-left">
+          <h1 class="text-lg md:text-4xl font-bold text-[var(--primary)] mb-4 leading-tight">
+            Transforming Businesses with Cutting-Edge Digital Solutions
+          </h1>
+          <p class="text-base md:text-lg text-[var(--primary)] mb-8">
+            Empowering Your Business with Innovative Tech and Seamless Digital
+            Experiences
+          </p>
+          <a href="#contact"
+            class="bg-[var(--accent)] text-white py-3 px-6 rounded hover:bg-blue-600 transition duration-500">Transform
+            Your Business</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <div id="aboutus" class="pt-20 mt-10">
+      <section id="about" class="bg-[var(--secondary)] py-5 md:py-5">
+        <div class="max-w-6xl mx-auto px-4">
+          <div class="flex flex-col md:flex-row items-center justify-center md:justify-between">
+            <!-- Text Content -->
+            <div class="w-full md:w-1/2 mb-10 md:mb-0 px-4">
+              <h2 class="text-3xl md:text-4xl font-extrabold text-[var(--primary)] mb-6">
+                About ByteWise Creators
+              </h2>
+              <p class="text-base md:text-lg text-[var(--primary)] leading-relaxed mb-8">
+                At ByteWise Creators, we specialize in transforming businesses
+                through cutting-edge digital solutions. Our team excels at
+                modernizing outdated systems and optimizing inefficient processes
+                to enhance operational efficiency. We design and implement custom
+                digital strategies that integrate the latest technology,
+                streamline workflows, and improve customer experiences. By
+                leveraging our expertise, we help businesses stay ahead of the
+                competition and unlock new growth opportunities. Partner with us
+                to revolutionize your digital landscape and drive success in a
+                rapidly evolving market.
+              </p>
+            </div>
+            <!-- Illustration or Image -->
+            <div class="w-full md:w-1/2 flex justify-center px-4">
+              <img src="assets/svgs/about-svg.svg" alt="Digital Transformation"
+                class="w-full h-96 max-w-md md:max-w-lg lg:max-w-xl rounded-lg drop-shadow-lg" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Services Section -->
+    <section id="services" class="bg-[var(--secondary)] py-16 md:py-24">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-extrabold text-[var(--primary)] mb-6">
+            Our Services
+          </h2>
+          <p class="text-lg md:text-xl text-[var(--primary)] leading-relaxed">
+            We provide a wide range of digital solutions to meet your business
+            needs.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <div class="service-card p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300">
+            <h3 class="text-2xl font-semibold text-[var(--primary)] mb-4">
+              Android App Development
+            </h3>
+            <p class="text-[var(--primary)]">
+              We create powerful, user-friendly Android applications to expand
+              your reach.
+            </p>
+          </div>
+          <div class="service-card p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300">
+            <h3 class="text-2xl font-semibold text-[var(--primary)] mb-4">
+              iOS App Development
+            </h3>
+            <p class="text-[var(--primary)]">
+              We develop sleek, high-performing iOS applications to engage your
+              audience on Apple devices.
+            </p>
+          </div>
+          <div class="service-card p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300">
+            <h3 class="text-2xl font-semibold text-[var(--primary)] mb-4">
+              Cross-Platform App Development
+            </h3>
+            <p class="text-[var(--primary)]">
+              Our applications run smoothly on multiple platforms, ensuring a
+              consistent user experience.
+            </p>
+          </div>
+          <div class="service-card p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300">
+            <h3 class="text-2xl font-semibold text-[var(--primary)] mb-4">
+              Web Development
+            </h3>
+            <p class="text-[var(--primary)]">
+              We build responsive, modern websites to enhance your online
+              presence.
+            </p>
+          </div>
+          <div class="service-card p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300">
+            <h3 class="text-2xl font-semibold text-[var(--primary)] mb-4">
+              Full-Stack Development
+            </h3>
+            <p class="text-[var(--primary)]">
+              Our comprehensive services cover both front-end and back-end
+              development, ensuring seamless integration and functionality.
+            </p>
+          </div>
+          <div class="service-card p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300">
+            <h3 class="text-2xl font-semibold text-[var(--primary)] mb-4">
+              Front-End Development
+            </h3>
+            <p class="text-[var(--primary)]">
+              We create interactive, engaging user interfaces using the latest
+              technologies.
+            </p>
+          </div>
+          <div class="service-card p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300">
+            <h3 class="text-2xl font-semibold text-[var(--primary)] mb-4">
+              UI/UX Design
+            </h3>
+            <p class="text-[var(--primary)]">
+              Our designs are intuitive and visually appealing, providing
+              delightful user experiences.
+            </p>
+          </div>
+          <div class="service-card p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300">
+            <h3 class="text-2xl font-semibold text-[var(--primary)] mb-4">
+              Backend Development
+            </h3>
+            <p class="text-[var(--primary)]">
+              We develop robust, scalable server-side applications tailored to
+              your business needs.
+            </p>
+          </div>
+
+          <div class="service-card p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300">
+            <h3 class="text-2xl font-semibold text-[var(--primary)] mb-4">
+              Version Control
+            </h3>
+            <p class="text-[var(--primary)]">
+              We efficiently manage and track changes in your codebase, ensuring
+              smooth collaboration and maintenance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Profile Card Section -->
+    <section class="bg-[var(--secondary)] py-16">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-extrabold text-[var(--primary)] mb-6">
+            Meet Our Founders
+          </h2>
+        </div>
+        <!-- First row centered cards -->
+        <div class="flex flex-col sm:flex-row sm:justify-center sm:space-x-8">
+          <!-- Profile Card 1 -->
+          <div
+            class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center profile-card mb-8 sm:mb-0 w-full sm:w-[300px]">
+            <img src="assets/img/deepakumar.png" alt="Founder Image"
+              class="w-32 h-32 rounded-full mb-4 drop-shadow-lg" />
+            <h3 class="text-xl font-semibold text-[var(--primary)]">
+              Deepakumar M
+            </h3>
+            <p class="text-[var(--primary)]">Founder & Project Manager</p>
+            <p class="text-[var(--primary)] mt-2 text-center">
+              Leads project development with a focus on excellence.
+            </p>
+          </div>
+          <!-- Profile Card 2 -->
+          <div class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center profile-card w-full sm:w-[300px]">
+            <img src="assets/img/hariharan.png" alt="Co-Founder Image"
+              class="w-32 h-32 rounded-full mb-4 drop-shadow-lg" />
+            <h3 class="text-xl font-semibold text-[var(--primary)]">
+              Hariharan C
+            </h3>
+            <p class="text-[var(--primary)]">Founder & Administrative Officer</p>
+            <p class="text-[var(--primary)] mt-2 text-center">
+              Handles administrative tasks for smooth company operations.
+            </p>
+          </div>
+        </div>
+        <!-- Second row grid cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8">
+          <!-- Profile Card 3 -->
+          <div class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center profile-card">
+            <img src="assets/img/ajay.png" alt="Co-Founder Image" class="w-32 h-32 rounded-full mb-4 drop-shadow-lg" />
+            <h3 class="text-xl font-semibold text-[var(--primary)]">Ajay D</h3>
+            <p class="text-[var(--primary)]">Co-Founder & CEO</p>
+            <p class="text-[var(--primary)] mt-2 text-center">
+              Drives strategic vision and company growth.
+            </p>
+          </div>
+          <!-- Profile Card 4 -->
+          <div class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center profile-card">
+            <img src="assets/img/hariprasath.png" alt="Co-Founder Image"
+              class="w-32 h-32 rounded-full mb-4 drop-shadow-lg" />
+            <h3 class="text-xl font-semibold text-[var(--primary)]">
+              Hari prasath K
+            </h3>
+            <p class="text-[var(--primary)]">Co-Founder & COO</p>
+            <p class="text-[var(--primary)] mt-2 text-center">
+              Optimizes operations for improved productivity.
+            </p>
+          </div>
+          <!-- Profile Card 5 -->
+          <div class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center profile-card">
+            <img src="assets/img/arvindh.jpg" alt="Co-Founder Image"
+              class="w-32 h-32 rounded-full mb-4 drop-shadow-lg" />
+            <h3 class="text-xl font-semibold text-[var(--primary)]">Arvindh V</h3>
+            <p class="text-[var(--primary)] text-center">
+              Co-Founder & Customer Services Representative
+            </p>
+            <p class="text-[var(--primary)] mt-2 text-center">
+              Ensures exceptional client service and support.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="bg-[var(--secondary)] py-16">
+      <div class="max-w-4xl mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-extrabold text-[var(--primary)] mb-6">
+            Contact Us
+          </h2>
+          <p class="text-lg text-[var(--primary)]">
+            We'd love to hear from you! Please fill out the form below to get in
+            touch with us.
+          </p>
+        </div>
+        <form id="contact-form" class="bg-white rounded-lg shadow-lg p-8" action="https://api.web3forms.com/submit"
+          method="post">
+          <input type="hidden" name="access_key" value="4cc034fa-5f4c-4fbe-8a54-8163b74746a8" />
+          <div class="mb-6">
+            <label for="name" class="block text-[var(--primary)] text-sm font-bold mb-2">Name</label>
+            <input type="text" id="name"
+              class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
+              placeholder="Your Name" name="name" required />
+          </div>
+          <div class="mb-6">
+            <label for="email" class="block text-[var(--primary)] text-sm font-bold mb-2">Email</label>
+            <input type="email" id="email"
+              class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
+              placeholder="Your Email" name="email" required />
+          </div>
+          <div class="mb-6">
+            <label for="phone" class="block text-[var(--primary)] text-sm font-bold mb-2">Phone</label>
+            <input type="tel" id="phone"
+              class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
+              placeholder="Your Phone Number" name="phone" required />
+          </div>
+          <div class="mb-6">
+            <label for="service" class="block text-[var(--primary)] text-sm font-bold mb-2">Service</label>
+            <select id="service"
+              class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
+              name="service" required>
+              <option value="" disabled selected>Select a Service</option>
+              <option value="android-app-development" name="android-app-development">
+                Android App Development
+              </option>
+              <option value="ios-app-development" name="ios-app-development">
+                iOS App Development
+              </option>
+              <option value="cross-platform-app-development" name="cross-platform-app-development">
+                Cross-Platform App Development
+              </option>
+              <option value="ui-ux-design" name="ui-ux-design">
+                UI/UX Design
+              </option>
+              <option value="web-development" name="web-development">
+                Web Development
+              </option>
+              <option value="full-stack-development" name="full-stack-development">
+                Full-Stack Development
+              </option>
+              <option value="frontend-development" name="frontend-development">
+                Front-End Development
+              </option>
+              <option value="backend-development" name="backend-development">
+                Backend Development
+              </option>
+              <option value="version-control" name="version-control">
+                Version Control
+              </option>
+            </select>
+          </div>
+          <div class="mb-6">
+            <label for="message" class="block text-[var(--primary)] text-sm font-bold mb-2">Message</label>
+            <textarea id="message" rows="4"
+              class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
+              placeholder="Your Message" name="message" required></textarea>
+          </div>
+          <div class="text-center">
+            <button type="submit"
+              class="bg-[var(--accent)] text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:ring-opacity-50">
+              Send Message
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Loader -->
+    <div id="loader" class="fixed inset-0 flex items-center justify-center bg-white bg-opacity-75 hidden z-50">
+      <div class="flex space-x-2">
+        <div class="w-4 h-4 bg-[var(--primary)] rounded-full animate-pulse"></div>
+        <div class="w-4 h-4 bg-[var(--primary)] rounded-full animate-pulse animation-delay-200"></div>
+        <div class="w-4 h-4 bg-[var(--primary)] rounded-full animate-pulse animation-delay-400"></div>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-[var(--primary)] text-white py-10">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="flex flex-wrap justify-between">
+          <!-- Company Information -->
+          <div class="w-full sm:w-1/2 md:w-1/4 mb-8 md:mb-0">
+            <h3 class="text-xl font-bold mb-4">ByteWise Creators</h3>
+            <p class="text-sm">
+              ByteWise Creators is a digital transformation agency dedicated to
+              bringing innovative solutions to modernize your business.
+            </p>
+          </div>
+          <!-- Quick Links -->
+          <div class="w-full sm:w-1/2 md:w-1/4 mb-8 md:mb-0">
+            <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+            <ul>
+              <li class="mb-2"><a href="/" class="hover:underline">Home</a></li>
+              <li class="mb-2">
+                <a href="#aboutus" class="hover:underline">About Us</a>
+              </li>
+              <li class="mb-2">
+                <a href="#services" class="hover:underline">Services</a>
+              </li>
+              <li class="mb-2">
+                <a href="#contact" class="hover:underline">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Services -->
+          <div class="w-full sm:w-1/2 md:w-1/4 mb-8 md:mb-0">
+            <h3 class="text-xl font-bold mb-4">Services</h3>
+            <ul>
+              <li class="mb-2">Web Development</li>
+              <li class="mb-2">Full-Stack Development</li>
+              <li class="mb-2">UI/UX Design</li>
+              <li class="mb-2">App Development</li>
+            </ul>
+          </div>
+        </div>
+        <div class="text-center mt-8">
+          <p class="text-sm">
+            &copy; 2024 ByteWise Creators. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const btn = document.querySelector("button.mobile-menu-button");
+    const menu = document.querySelector(".mobile-menu");
+
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+
+    document.querySelectorAll(".service-card").forEach((card) => {
+      card.addEventListener("mouseover", () => {
+        card.classList.add("shadow-xl");
+      });
+      card.addEventListener("mouseout", () => {
+        card.classList.remove("shadow-xl");
+      });
+    });
+
+    document.querySelectorAll("a.nav-link").forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+          behavior: "smooth",
+        });
+      });
+    });
+
+    document
+      .getElementById("contact-form")
+      .addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        var form = event.target;
+
+        fetch(form.action, {
+          method: form.method,
+          body: new FormData(form),
+        })
+          .then(function (response) {
+            if (response.ok) {
+              window.location.href = "/success";
+            } else {
+              alert(
+                "There was a problem with your submission. Please try again."
+              );
+            }
+          })
+          .catch(function (error) {
+            alert("There was a problem with your submission. Please try again.");
+          });
+
+        form.reset();
+      });
+
+    document
+      .getElementById("contact-form")
+      .addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        var form = event.target;
+        var loader = document.getElementById("loader");
+        loader.classList.remove("hidden");
+
+        fetch(form.action, {
+          method: form.method,
+          body: new FormData(form),
+        })
+          .then(function (response) {
+            loader.classList.add("hidden");
+            if (response.ok) {
+              window.location.href = "/success";
+            } else {
+              alert(
+                "There was a problem with your submission. Please try again."
+              );
+            }
+          })
+          .catch(function (error) {
+            loader.classList.add("hidden");
+            alert("There was a problem with your submission. Please try again.");
+          });
+
+        form.reset();
+      });
+
+    document.addEventListener("DOMContentLoaded", () => {
+      var loader = document.getElementById("loader");
+      loader.classList.remove("hidden"); // Show the loader
+
+      setTimeout(() => {
+        loader.classList.add("hidden"); // Hide the loader after 2 seconds
+      }, 2000);
+    });
+  </script>
+  <%- include('partials/footer') %>
+    <!-- Including footer.ejs -->
